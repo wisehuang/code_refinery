@@ -55,18 +55,17 @@ AI-powered code refactoring service with modern frontend and backend architectur
 
 2. **Install dependencies**
    ```bash
-   # Using uv (recommended)
-   uv venv
-   source .venv/bin/activate  # Linux/Mac
-   # .venv\Scripts\activate  # Windows
+   # Using uv (recommended, requires Python 3.12+)
    uv pip install -r requirements.txt
+   # Or, to use the canonical pyproject.toml (recommended for development)
+   uv pip install .
+   # For editable/development install:
+   uv pip install -e .
    
-   # Or using pip
-   python -m venv venv
-   source venv/bin/activate  # Linux/Mac
-   # venv\Scripts\activate  # Windows
+   # Or using pip (for compatibility)
    pip install -r requirements.txt
    ```
+   > **Note:** `requirements.txt` is provided for compatibility, but `pyproject.toml` is the canonical source of dependencies.
 
 3. **Set environment variables**
    ```bash
